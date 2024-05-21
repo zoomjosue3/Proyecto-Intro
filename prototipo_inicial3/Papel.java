@@ -1,44 +1,40 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
 
-/**
- * Write a description of class RedCar here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Papel extends Actor
 {
-    private static final Random _rand = new Random(37L);
+    private static final Random rand = new Random(37L);
     
     private int x;
     private int y;
+    private int speed; // Variable para la velocidad de caída
     
     public Papel() {
-        x = 0;
-        y = 0;
+        this(0, 1);
     }
     
     public Papel(int x) {
-        this.x = x;
-        this.y = getImage().getHeight() / 2;
+        this(x, 1);
     }
     
-    public Papel(World world) {
+    public Papel(int x, int speed) {
+        this.x = x;
+        this.y = getImage().getHeight() / 2;
+        this.speed = speed;
+    }
+    
+    public Papel(World world, int speed) {
         int wWidth = world.getWidth();
-        int wHeight = world.getHeight();
         int iHeight = getImage().getHeight();
         
-        x = _rand.nextInt(wWidth);
-        y = iHeight / 2;
+        this.x = rand.nextInt(wWidth);
+        this.y = iHeight / 2;
+        this.speed = speed;
     }
-    /**
-     * Act - do whatever the RedCar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
-        y = y + 1;
+        y += speed; // Usar la velocidad para mover el objeto
         setLocation(x, y);
         if (isAtEdge()) {
             ((MyWorld)getWorld()).removePapel(this);
@@ -50,4 +46,3 @@ public class Papel extends Actor
     public int getWidth() { return getImage().getWidth(); }
     public int getHeight() { return getImage().getHeight(); }
 }
-
