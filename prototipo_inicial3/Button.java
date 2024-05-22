@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Button extends Actor
 {
     /**
-     * Act - do whatever the BotonJugar wants to do. This method is called whenever
+     * Act - do whatever the Button wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private World link;
@@ -20,7 +20,6 @@ public class Button extends Actor
     
     public void act()
     {
-        // Add your action code here.
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(this.link);
         }

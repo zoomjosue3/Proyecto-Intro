@@ -15,10 +15,9 @@ public class Start extends World
      */
     public Start()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
-        Button playButton = new Button("jugar.png", new MyWorld());
-        addObject(playButton, 400, 300);
+        Button playButton = new Button("jugar8.png", new MyWorld());
+        addObject(playButton, 150, 350);
         
     }
 }

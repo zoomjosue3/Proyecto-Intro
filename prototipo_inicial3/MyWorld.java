@@ -18,7 +18,7 @@ public class MyWorld extends World
 
         setBackground("885542.jpg"); 
 
-        Greenfoot.setSpeed(65);
+        Greenfoot.setSpeed(60);
         
         xPositions = getXPositions();
         

@@ -18,13 +18,13 @@ public class Piedra extends Actor
     public void act() 
     {
         if (Greenfoot.isKeyDown("left")) {
-            x -= 1;
+            x -= 2;
         } else if (Greenfoot.isKeyDown("right")) {
-            x += 1;
+            x += 2;
         } else if (Greenfoot.isKeyDown("up")) {
-            y -= 1;
+            y -= 2;
         } else if (Greenfoot.isKeyDown("down")) {
-            y += 1;
+            y += 2;
         }
         setLocation(x, y);
         checkCollision();
