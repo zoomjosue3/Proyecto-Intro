@@ -34,6 +34,9 @@ public class Piedra extends Actor
         Papel papel = (Papel) getOneIntersectingObject(Papel.class);
         if (papel != null) {
             Greenfoot.stop();
+            if(isTouching(Papel.class))
+                {Greenfoot.setWorld(new GameOver());
+                }
         }
     }
     
