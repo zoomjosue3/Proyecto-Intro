@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Papel
+comment1.params=
+comment1.target=Papel()
+comment2.params=x
+comment2.target=Papel(int)
+comment3.params=x\ speed
+comment3.target=Papel(int,\ int)
+comment4.params=world\ speed
+comment4.target=Papel(greenfoot.World,\ int)
+comment5.params=
+comment5.target=void\ act()
+comment6.params=
+comment6.target=int\ getX()
+comment7.params=
+comment7.target=int\ getY()
+comment8.params=
+comment8.target=int\ getWidth()
+comment9.params=
+comment9.target=int\ getHeight()
+numComments=10
